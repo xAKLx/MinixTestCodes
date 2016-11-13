@@ -6,11 +6,11 @@
 int main(int argc, char **argv)
 {
  
- 	message m
+ 	message m;
 
  	int i = _syscall(PM_PROC_NR, PM_GETDATE, &m);
 
  	printf("Syscall equals %d", i);
- 	
+
     return 0;
 }
