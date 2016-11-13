@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
  	m.m1_i1 = atoi(argv[1]);
 
- 	i = _syscall(PM_PROC_NR, PM_SEM_DOWN, &m);
+ 	i = _syscall(PM_PROC_NR, PM_SEM_UP, &m);
 
  	printf("\nSyscall down equals %d", i);
 
