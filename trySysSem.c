@@ -18,6 +18,8 @@ int main(int argc, char **argv)
 
  	printf("\nSyscall create equals %d", i);
 
+ 	m.m1_i1 = atoi(argv[1]);
+
  	i = _syscall(PM_PROC_NR, PM_SEM_DOWN, &m);
 
  	printf("\nSyscall down equals %d", i);
