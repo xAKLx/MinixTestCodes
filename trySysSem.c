@@ -10,9 +10,9 @@ int main(int argc, char **argv)
  
  	message m;
 
- 	m.m1_i1 = atoi(argv[0]);
+ 	m.m1_i1 = atoi(argv[1]);
 
- 	printf("Argument to send %d", atoi(argv[0]));
+ 	printf("Argument to send %d", atoi(argv[1]));
 
  	int i = _syscall(PM_PROC_NR, PM_SEM_CREATE, &m);
 
