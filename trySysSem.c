@@ -18,11 +18,11 @@ int main(int argc, char **argv)
 
  	i = _syscall(PM_PROC_NR, PM_SEM_DOWN, &m);
 
- 	printf("Syscall down equals %d", i);
+ 	printf("/nSyscall down equals %d", i);
 
  	i = _syscall(PM_PROC_NR, PM_SEM_CREATE, &m);
 
- 	printf("Syscall createequals %d", i);
+ 	printf("/nSyscall createequals %d", i);
 
     return 0;
 }
