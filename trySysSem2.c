@@ -20,5 +20,7 @@ int main(int argc, char **argv)
 
  	int i = _syscall(PM_PROC_NR, PM_SEM_CREATE, &m);
 
+ 	printf("\nSyscall Pid =  %d", m.m1_i1);
+
     return 0;
 }
