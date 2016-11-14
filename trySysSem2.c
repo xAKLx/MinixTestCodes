@@ -13,6 +13,7 @@ int main(int argc, char **argv)
  	message m;
 
  	m.m1_i1 = atoi(argv[1]);
+ 	m.m1_i2 = getpid();
 
   printf("\nPid from test = %d", getpid());
 
