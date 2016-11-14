@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <minix/syslib.h>
 #include <lib.h>    // provides _syscall and message
- 
+#include <sys/types.h>
+#include <unistd.h>
+
 int main(int argc, char **argv)
 {
 	if(argc < 1)
