@@ -59,8 +59,10 @@ int main(int argc, char **argv)
  	}
  	printf("\nProcess %d Finished\n", pid);
 
+ 	sem_up(sem);
+
  	sleep(10);
 
- 	sem_up(sem);
+ 	
 
 }
