@@ -6,6 +6,12 @@
 #include <unistd.h>
 #include <signal.h>
 
+void sig_handler(int signo)
+{
+  if (signo == SIGSTOP)
+    printf("received SIGSTOP\n");
+}
+
 int call_sem(int id, int action)
 {
 	message m;
@@ -28,6 +34,9 @@ int sem_terminate(int id)
 
 int sem_down(int id)
 {
+
+  signal(SIGSTOP, sig_handler);
+
   int success;
 
   success = call_sem(id, PM_SEM_DOWN);
