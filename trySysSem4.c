@@ -4,6 +4,7 @@
 #include <lib.h>    // provides _syscall and message
 #include <sys/types.h>
 #include <unistd.h>
+#include <signal.h>
 
 int call_sem(int id, int action)
 {
