@@ -8,8 +8,8 @@
 
 void sig_handler(int signo)
 {
-  if (signo == SIGSTOP)
-    printf("received SIGSTOP\n");
+  if (signo == SIGCONT)
+    printf("received SIGCONT\n");
 }
 
 int call_sem(int id, int action)
@@ -35,7 +35,7 @@ int sem_terminate(int id)
 int sem_down(int id)
 {
 
-  signal(SIGSTOP, sig_handler);
+  signal(SIGCONT, sig_handler);
 
   int success;
 
