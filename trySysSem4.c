@@ -31,8 +31,12 @@ int sem_down(int id)
   int success;
 
   success = call_sem(id, PM_SEM_DOWN);
+
+  printf("\nCall Return = %d\n", success);
   while (success == 1) {
+    printf("\n%d blocking itself\n", getpid());
     raise (SIGSTOP);
+    printf("\n%d unblocked", getpid());
     success = call_sem(id, PM_SEM_DOWN);
   }
 
