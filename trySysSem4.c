@@ -10,6 +10,8 @@ void sig_handler(int signo)
 {
   if (signo == SIGCONT)
     printf("received SIGCONT\n");
+  else
+    printf("received another signal\n");
 }
 
 int call_sem(int id, int action)
