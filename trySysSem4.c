@@ -8,10 +8,7 @@
 
 void sig_handler(int signo)
 {
-  if (signo == SIGCONT)
-    printf("received SIGCONT\n");
-  else
-    printf("received another signal\n");
+  return;
 }
 
 int call_sem(int id, int action)
@@ -43,11 +40,8 @@ int sem_down(int id)
 
   success = call_sem(id, PM_SEM_DOWN);
 
-  printf("\nCall Return = %d\n", success);
   while (success == 1) {
-    printf("\n%d blocking itself\n", getpid());
     pause();
-    printf("\n%d unblocked", getpid());
     success = call_sem(id, PM_SEM_DOWN);
   }
 
