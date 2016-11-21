@@ -78,5 +78,5 @@ int main(int argc, char **argv)
 
  	sem_up(sem);
 
- 	sleep(10);
+ 	
 }
