@@ -42,6 +42,7 @@ int sem_down(int id)
 
   while (success == 1) {
     pause();
+    printf("ay pero que dolor");
     success = call_sem(id, PM_SEM_DOWN);
   }
 
@@ -78,5 +79,5 @@ int main(int argc, char **argv)
 
  	sem_up(sem);
 
- 	
+
 }
